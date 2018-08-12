@@ -2,6 +2,6 @@ applications:
 - name: patisserie-nodejs
   memory: 256M
   instances: 1
-  route: patisserie-nodejs-${random-word}
+  routes: patisserie-nodejs-${random-word}
   services:
   - patisserie-mysql
