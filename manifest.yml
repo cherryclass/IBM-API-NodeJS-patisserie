@@ -2,6 +2,7 @@ applications:
 - name: patisserie-nodejs
   memory: 256M
   instances: 1
-  routes: patisserie-nodejs-${random-word}
+  routes: 
+    - route: patisserie-nodejs-${random-word}.eu-de.mybluemix.net
   services:
   - patisserie-mysql
