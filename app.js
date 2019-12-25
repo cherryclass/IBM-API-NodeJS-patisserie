@@ -67,4 +67,12 @@ myRouter.route('/gateaux')
 	connection.end(); })
 
 app.use(myRouter); 
+
+var path = require('path');
+app.get('/', function (req, res) {
+    res.sendFile(path.join(__dirname + '/index.html'));
+});
+/* CLIENT HTML END **************************************************************************************/
+
+
 app.listen(port, host);
