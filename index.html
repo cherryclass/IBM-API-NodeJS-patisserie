@@ -112,7 +112,7 @@ $('#btn-get-gateau').click(function(){
       url: "/gateau/"+idx,
       success: function(data){ 
 
-       	$("#result").html(data);
+       	$("#result").html(data.message);
       }
     });
   });
