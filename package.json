@@ -1,11 +1,9 @@
 {
-	"name": "API Express",
-	"version": "1.0",
+	"name": "NodejsStarterApp",
+	"version": "0.0.1",
+	"private": true,
 	"scripts": {
-		"start": "node server.js"
-	},
-	"engines": {
-		"node": "10.*"
+		"start": "node app.js"
 	},
 	"dependencies": {
 		"body-parser": "^1.19.0",
@@ -16,4 +14,8 @@
 		"mysql": "^2.17.1",
 		"request": "^2.88.0"
 	}
+	"repository": {},
+	"engines": {
+		"node": "10.*"
+	} 
 }
