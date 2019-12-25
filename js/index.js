@@ -1,4 +1,4 @@
-var myUrl = "https://ibm-api-slim-patisserie.eu-de.mybluemix.net/";
+//var myUrl = "https://ibm-api-slim-patisserie.eu-de.mybluemix.net/";
 
 $( document ).ready(function() {
 $('#btn-insert-gateau').click(function(){ 
@@ -8,7 +8,7 @@ $.ajax({
       type: "POST",
       crossDomain: true,
       contentType: 'application/json; charset=utf-8',
-      url: myUrl+"gateau?id="+id+"&nom="+nom,
+      url: "/gateau?id="+id+"&nom="+nom,
      success: function(data){
           //gateau modifié
          alert("gateau enregistré");
@@ -20,7 +20,7 @@ $('#btn-get-gateau').click(function(){
       $.ajax({ 
       crossDomain: true,
       type: "GET",
-      url: myUrl+"gateau/"+idx,
+      url: "/gateau/"+idx,
       success: function(data){ 
 
        	$("#result").html(data);
@@ -32,7 +32,7 @@ $('#btn-get-gateau').click(function(){
 
 $('#btn-get-gateaux').click(function(){ 
       $('#table-gateau').bootstrapTable({
-            url: myUrl+"gateaux",
+            url: "/gateaux",
             columns: [{
                 field: 'id',
                 title: 'Item ID'
