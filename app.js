@@ -2,12 +2,13 @@ var express = require('express');
 var request = require('request');
 var bodyParser = require('body-parser');
 var mysql  = require('mysql');
+var cors= require('cors');
 
 
 var host = (process.env.VCAP_APP_HOST || 'localhost');
 var port = (process.env.VCAP_APP_PORT || 3000);
 var app = express();
-
+app.use(cors());
 
 var services = JSON.parse(process.env.VCAP_SERVICES);
 var mysql_creds = services['compose-for-mysql'][0].credentials;
