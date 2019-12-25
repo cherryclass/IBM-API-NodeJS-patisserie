@@ -61,7 +61,7 @@ myRouter.route('/gateaux')
 	connection.query('SELECT * from gateau', function (error, results, fields) {
 		if (error) throw error;
 	res.json({
-		message : results}); 
+		results}); 
 	});	
 	
 	connection.end(); })
